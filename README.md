@@ -18,7 +18,7 @@ Materiais de estudo, anotações de aula e scripts de configuração do ambiente
 Um projeto de **Segurança Forense Ativa para DeFi**.
 - **Agent (Rust)**: Monitoramento de mempool e detecção de anomalias.
 - **Contract (Move)**: Cofre com mecanismo de *Emergency Shutdown*.
-- [Acessar Repositório do Projeto](./SuiSentinel/)
+- [Acessar Repositório do Projeto](https://github.com/mvcavalheirojr/SuiSentinel)
 
 ## 🚀 Como Usar
 
