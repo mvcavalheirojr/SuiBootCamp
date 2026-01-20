@@ -1,37 +1,39 @@
-# Sui Move Bootcamp Environment
+# Marcos Cavalheiro's Sui Lab (SuiBootCamp)
 
-This repository contains the setup for the Sui Move Bootcamp environment.
+Este repositório é o hub central do meu desenvolvimento no ecossistema Sui. Ele contém tanto os materiais de estudo do Bootcamp oficial quanto projetos de portfólio profissional.
 
-## Prerequisites
+## 📂 Estrutura do Repositório
 
-- Linux (Ubuntu/Debian recommended) or macOS
-- curl, git
+### 1. 🎓 Sui Move Bootcamp (Raiz)
+Materiais de estudo, anotações de aula e scripts de configuração do ambiente.
 
-## Setup
+- **[`aulas/`](./aulas/)**: Notas detalhadas de cada aula (Dia 1 ao Dia 9).
+    - [Índice das Aulas](./aulas/README.md)
+- **`setup_sui.sh`**: Script de automação para instalar Rust, Sui CLI e dependências.
+- **`bin/` & `logs/`**: Utilitários e arquivos de log do ambiente.
 
-A setup script is provided to automate the installation of dependencies, Rust, and the Sui CLI.
+### 2. 🛡️ [SuiSentinel](./SuiSentinel/) (Submodule)
+> *Git Submodule apontando para `mvcavalheirojr/SuiSentinel`*
 
-1.  Make the script executable (if it isn't already):
-    ```bash
-    chmod +x setup_sui.sh
-    ```
+Um projeto de **Segurança Forense Ativa para DeFi**.
+- **Agent (Rust)**: Monitoramento de mempool e detecção de anomalias.
+- **Contract (Move)**: Cofre com mecanismo de *Emergency Shutdown*.
+- [Ver README do Projeto](./SuiSentinel/README.md)
 
-2.  Run the script:
-    ```bash
-    ./setup_sui.sh
-    ```
-    *Note: The script requires `sudo` privileges to install system dependencies.*
+## 🚀 Como Usar
 
-## Verification
-
-After installation, verify the tools are correctly installed:
+### Instalação do Ambiente
+Se você está clonando este repo pela primeira vez:
 
 ```bash
-rustc --version
-cargo --version
-sui --version
+chmod +x setup_sui.sh
+./setup_sui.sh
+source ~/.zshrc
 ```
 
-## Resources
+### Inicializando o Submodule (SuiSentinel)
+Para baixar o código do projeto Sentinel:
 
-- [Sui Developer Certification - Links Importantes](https://sui-3.gitbook.io/sui-developer-certification/recursos/links-importantes#aulas-dezembro)
+```bash
+git submodule update --init --recursive
+```

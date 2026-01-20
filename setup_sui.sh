@@ -28,11 +28,11 @@ if ! command -v sui &> /dev/null; then
     mkdir -p ~/.local/bin
     
     # Try to fetch the latest release URL for Linux x86_64
-    LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/MystenLabs/sui/releases/latest | grep "browser_download_url.*sui-mainnet-.*-ubuntu-x86_64.tgz" | cut -d : -f 2,3 | tr -d '\"')
+    LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/MystenLabs/sui/releases/latest | grep "browser_download_url.*sui-mainnet-.*-ubuntu-x86_64.tgz" | cut -d : -f 2,3 | tr -d '\"' | xargs)
     
     if [ -z "$LATEST_RELEASE_URL" ]; then
         echo "Could not find mainnet binary. Trying testnet..."
-        LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/MystenLabs/sui/releases/latest | grep "browser_download_url.*sui-.*-ubuntu-x86_64.tgz" | head -n 1 | cut -d : -f 2,3 | tr -d '\"')
+        LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/MystenLabs/sui/releases/latest | grep "browser_download_url.*sui-.*-ubuntu-x86_64.tgz" | head -n 1 | cut -d : -f 2,3 | tr -d '\"' | xargs)
     fi
 
     if [ -n "$LATEST_RELEASE_URL" ]; then

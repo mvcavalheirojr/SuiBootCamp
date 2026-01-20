@@ -1,0 +1,24 @@
+# Binaries
+/bin/
+bin/
+*.tgz
+
+# Logs
+/logs/
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Dependencies
+target/

@@ -1,0 +1,3 @@
+[submodule "SuiSentinel"]
+	path = SuiSentinel
+	url = git@github.com:mvcavalheirojr/SuiSentinel.git
