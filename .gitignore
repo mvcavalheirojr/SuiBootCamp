@@ -22,3 +22,6 @@ Thumbs.db
 
 # Dependencies
 target/
+build/
+*.mv
+Cargo.lock
